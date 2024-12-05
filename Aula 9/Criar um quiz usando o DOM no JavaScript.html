@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <style>
+   h1{
+    color:rgb(0, 0, 0);
+   }
+
+    body {
+    background: linear-gradient(white,black,blue );
+    height: 100vh;
+    margin: 0; 
+    font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+        .quiz-container {
+      max-width: 600px;
+      margin: auto;
+    }
+    .question {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .options {
+      margin: 10px 0;
+    }
+    .options button {
+      display: block;
+      margin: 5px 0;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+    .result {
+      font-size: 22px;
+      margin-top: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+<hr>
+  <marquee><h1>Perguntas</h1></marquee>
+  <hr>
+  <div class="quiz-container">
+    <div id="quiz">
+      <!-- O conteúdo será gerado dinamicamente -->
+    </div>
+    <div id="result" class="result"></div>
+  </div>
+  <script src="quiz.js"></script>
+  <button onclick="restartPage()">Reiniciar Página</button>
+</body>
+</html>

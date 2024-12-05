@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digicad</title>
+</head>
+<body>
+    <script>
+
+        // Cumprimentando o usuário 
+        alert(`Olá! Eu sou da Escola DIGICAD, sou assistente virtual.vamos nos conhecer melhor! 😊 `)
+
+        //Coletando as informações Pessoais
+        let nome = prompt('Qual é seu nome');
+        let idade = parseInt(prompt('Quantos anos você tem?'));
+        let cidade = prompt('Em qual cidade você mora?');
+
+        //resposta personalizada 
+
+        alert(`Muito prazer, ${nome}! vejo que você tem ${idade} anos e mora em ${cidade}. Vamos fazer alguns Calculos? 😊`);
+
+        //solicitando números para calculos
+
+        let numero1 = parseFloat(prompt('Digite um numero'));
+        let numero2 = parseFloat(prompt('Digite outro numero'));
+
+        //Realizando os Calculos 
+        let soma = numero1 + numero2;
+        let subtracao  = numero1 - numero2;
+        let multiplicacao = numero1 * numero2;
+        let divisao = numero1 / numero2;
+        let modulo = numero1 % numero2;
+
+        alert(`
+        aqui estão os resultados dos cálculos com os números que você me forneceu:
+
+        -soma: ${soma}
+        -subtração: ${subtracao} 
+        -multiplicação: ${multiplicacao}
+        -divisão: ${divisao.toFixed(2)}  
+        -modulo: ${modulo}
+           `);
+
+        //mensagem de despedida 
+        alert(`Obrigado por usar assistente virtual da Digicad, ${nome}`);
+
+    </script>
+</body>
+</html>

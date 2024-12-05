@@ -1,0 +1,61 @@
+
+<!-- Atividade: Obter uma dica aleatória para motivação diária
+Contexto:
+Imagine que você está criando uma página de motivação. Sempre que o usuário clicar em um botão, uma dica motivacional será exibida na tela. Essas dicas são fornecidas por uma API pública de frases motivacionais.
+
+O objetivo é praticar o uso de jQuery para manipular elementos da página e AJAX para buscar dados de uma API.
+
+Instruções da atividade:
+Crie uma página HTML com um botão chamado "Obter Dica".
+Quando o botão for clicado, use o jQuery para fazer uma requisição AJAX para a API pública de frases motivacionais.
+Exiba a dica motivacional recebida na página dentro de uma <div>. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivação Diária</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    #mensagem {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #2d89ef;
+    }
+  </style>
+</head>
+<body>
+  <h1>Motivação do Dia</h1>
+  <button id="obterDica">Obter Dica</button>
+  <div id="mensagem">Clique no botão para receber uma dica motivacional.</div>
+
+  <script>
+    // Configurando o botão para buscar uma dica motivacional
+    $("#obterDica").on("click", function() {
+      // Fazendo a requisição AJAX
+      $.ajax({
+        url: "https://api.adviceslip.com/advice", // API pública de dicas motivacionais
+        type: "GET",
+        success: function(resposta) {
+          // Convertendo o JSON em objeto
+          const dica = JSON.parse(resposta);
+          // Exibindo a dica na página
+          $("#mensagem").text(dica.slip.advice);
+        },
+        error: function() {
+          // Exibindo uma mensagem de erro
+          $("#mensagem").text("Erro ao carregar a dica. Tente novamente!");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <script>
+
+/*
+
+//switch case
+
+        let nome = "Danilo"; // prompt('Digite um nome...')
+
+        switch(nome) {
+
+            case "Danilo":
+            alert('é rico');
+            break;
+
+            case "Natan":
+            alert('Parece Nerd');
+            break;
+
+            default:
+                alert('Não conseguiu encontrar');
+
+        }
+
+ */
+
+ /*
+let frutas = ["Banana","Manga","Maça","Kiwi","Uva","Abacate","Morango","Ameixa"];
+
+//push = add no final 
+frutas.push("Jaca");
+
+// pop = excluí o último
+frutas.pop();
+
+// shift = excluí o primeiro 
+frutas.shift();
+
+// unshift = add no começo
+frutas.unshift("Banana");
+
+alert("array após manipulação:" + frutas); //exibe o array após as manipulações
+alert("Tamanho do array:" + frutas.length); // tamanho do array 
+alert("Primeiro Elemento:" + frutas[0]);   //Primeiro elemento
+alert("último elemento:" + frutas[frutas.length -1]); //ultimo elemento
+
+//Passando por cada elemento com alert
+
+for (let i =0; i < frutas.length; i++) {
+    alert("Frutas" + (i + 1) + ":" + frutas[i]);
+}
+
+*/
+
+//Matrizes 
+
+let matriz = [
+
+["Danilo", 31, "SP"],
+["Maria",19,"RJ"],
+["João",42,"BH"]
+]
+
+console.log(matriz.length) //3
+console.log(matriz[0]) //["Danilo", 31, "SP"]
+console.log(matriz[0][0]) //"Danilo"
+
+for (let i = 0; i < matriz.length; i++) { //loop externo: percorre as linhas 
+    for (let j = 0; j < matriz[i].length; j++) { // loop interno: percorre os elemntos da linha
+        console.log(matriz[i][j]);
+    }
+    
+}
+
+
+
+    </script>
+</body>
+</html>

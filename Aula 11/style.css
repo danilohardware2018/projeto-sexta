@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, sans-serif;
+    margin-right: 20px;
+}
+
+h1{
+    color: #333;
+
+ }
+ .campo{
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+ label{
+display: block;
+font-weight: bold;
+}
+
+button{
+   background-color: aqua; 
+   color: white;
+   border: none;
+   padding: 10px 15px;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+button:hover{
+    background-color: blueviolet;
+}
+
+pre {
+    background-color: rgb(199, 151, 87);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 600px;
+    overflow-x: auto;
+}

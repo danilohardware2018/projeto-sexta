@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByClassName</title>
+    <style>
+        .item{
+
+            color: black;
+            font-size: 18px;
+        }
+        .destacado{
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <ul>
+        <li class="item">Esdutar VavaScript</li>
+        <li class="item">Fazer Exercícios</li>
+        <li class="item">Ler Documentação</li>
+        <li class="item">Praticar Programação</li>
+    </ul>
+    <button id="destacar">destacar Itens</button>
+    <button id="resetar">Resetar Estilo</button>
+
+    <script>
+
+        //selecionar os botões 
+
+        const botaoDestacar = document.getElementById("destacar");
+        const botaoResetar = document.getElementById("resetar");
+
+        // função para destacar os itens da lista 
+        botaoDestacar.addEventListener("click" , () => {
+        // selecionar todos os elemntos com a classe "item"
+        const itens = document.getElementsByClassName("item");
+
+        // converter HTMLcollection para array e aplicar as mudanças 
+        Array.from(itens).forEach((item) => {
+            item.classList.add("destacado");
+        });
+    });
+    
+
+        // função para resetar os estilos 
+        botaoResetar.addEventListener("click" , () => {
+            const itens = document.getElementsByClassName("item");
+
+            Array.from(itens).forEach((item)=>   {      
+        item.classList.remove("destacado");
+        });
+    });
+    </script>
+
+</body>
+</html>

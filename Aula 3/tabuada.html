@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <script>
+      /*  
+        let num = parseInt(prompt('Digite um número'));
+
+        for( let i = 1; i <=10; i++){
+            let result = i * num;
+            alert(` ${num} x ${i} = ${result}`)
+        } 
+*/
+        // Solicita ao usuário o número para a tabuada
+        let num = parseInt(prompt('Digite um número'));
+        let rep = 0;
+        let counter = 1; // Contador para o while
+
+        while (counter <= 10) {
+            // O for faz a tabuada para o número escolhido
+            for (let i = 1; i <= 10; i++) {
+                let result = num * i;
+                rep += `${num} x ${i} = ${result}\n`; 
+            }
+            counter++; 
+        }
+        // Exibe a tabuada em um único alert
+        alert(rep);
+    </script>
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+/* Resetando as margens padrão e definindo o comportamento básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o estilo do body para centralizar o conteúdo */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Adiciona orientação vertical */
+    background-color: #f0f0f0; /* Cor de fundo */
+}
+
+/* Estilo do quadrado */
+.quadrado {
+    width: 400px; /* Largura do quadrado */
+    height: 400px; /* Altura do quadrado */
+    background-color: #3498db; /* Cor inicial do quadrado */
+    cursor: pointer; /* Muda o cursor para indicar que é interativo */
+    transition: background-color 0.3s; /* Transição suave de cor */
+    margin-bottom: 20px; /* Espaço entre o quadrado e o texto */
+}
+
+/* Estilo para exibir a cor em RGB */
+#corDisplay {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-weight: bold;
+}

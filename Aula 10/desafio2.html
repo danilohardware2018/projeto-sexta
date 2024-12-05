@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivação Diária</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>Motição do Dia</h1>
+    <button id="obterDica">Obter Dica</button>
+    <div id="mensagem">Clique no botão para receber uma dica Motivacional.</div>
+
+    <script>
+        //configurando o botão para buscar uma dica motivacional 
+        $("#obterDica"),on("click", function(){
+            //fazendo a requisição do AJax
+            $.ajax({
+                url: "https://api.adviceslip.com/advice", // API pública de dicas motivacionais     
+                type: "GET",
+                success: function(resposta) {
+                    // convertendo o json em objeto 
+                    const dica = JSON.parse(resposta);
+                    //exibindo a dica na página
+                    $("#mensagem").text(dica.slip.advice);
+                },
+                 error: function(){
+                    //exibindo uma mensagem de erro
+                    $("#mensagem").text("Erro ao carregar a dica. Tente Novamente");
+                 }
+        });
+    });
+    </script>
+</body>
+</html>

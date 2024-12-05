@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos </title>
+</head>
+<body>
+    <script>
+
+        let a = 5
+        let b = '5'
+        let c = 2
+        let d = 3
+
+        //E
+
+        Console.log(a > c && d > c && a < d) // false
+        
+        // todas minhas condições forem verdadeiras 
+
+        // a > c: 5 > 2 = true
+        // d > c: 3 > 2 = true
+        // a < d: 5 < 3 = false
+
+        // Resultado final será false.
+
+        //ou
+
+        console.log ( a < c || d > c || a < d) // true
+
+        //a < c: 5 < 2 false
+        //d > c: 3 > 2 true
+        //a < d: 5 < 3 false
+
+        //resultado final será verdadeiro, pelo menos uma verdadeira.
+
+        //não 
+
+        let chovendo = true
+        console.log(!chovendo) // false
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
